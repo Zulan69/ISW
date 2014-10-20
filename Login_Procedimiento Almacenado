@@ -1,0 +1,27 @@
+create or replace PROCEDURE LOGIN( rut$ in VARCHAR2, contrasena$ in VARCHAR2, nombre$ out varchar2,codigoError$ out INTEGER,mensajeError$ out VARCHAR2)AS 
+Xnombre varchar2(20);
+BEGIN
+  codigoError$:=0;
+  mensajeError$:=' ';
+  nombre$:=' ';
+  
+  select
+    NOMBRE
+  into
+    nombre$
+  from 
+     TRABAJADOR
+  where 
+    RUT=rut$ and 
+    CONTRASEÑA=contrasena$;
+
+exception
+  when no_data_found then
+    codigoError$:=sqlcode;
+    mensajeError$:='Usuario o contraseña invalido';
+  
+  when others then 
+    codigoError$:= sqlcode;
+    mensajeError$:=SQLERRM;
+  
+END LOGIN;
