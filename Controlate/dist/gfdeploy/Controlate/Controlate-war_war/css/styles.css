@@ -1,0 +1,47 @@
+.container {
+    margin: 0 auto;
+
+}
+.salir{
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+
+}
+.salir span,tex{
+    color: #fff;
+}
+.cuerpo{
+    background: #18bc9c;
+}
+.salir:hover,
+.salir:focus
+{
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+}
+
+.right{
+    position: absolute;
+    right: 6%;
+    top: 1%;
+}
+.rightBottom{
+    position: static;
+    /* right: 6%; */
+    /* bottom: 7%; */
+    padding-left: 80%;
+}
+.panel{
+    margin-top: 5%;
+}
+.panel-body{
+
+    background-color: aliceblue;
+    color: green;
+}
+header{
+     margin-top: 5%;
+     height: 100%;
+}
